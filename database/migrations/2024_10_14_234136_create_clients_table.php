@@ -13,6 +13,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->string('email')->unique();
+            $table->string('cpf')->unique();
             $table->string('telefone')->nullable();
             $table->timestamps();
         });

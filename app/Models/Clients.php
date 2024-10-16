@@ -10,9 +10,9 @@ class Clients extends Model
 {
     use HasFactory;
 
-    protected $table = 'Clients';
+    protected $table = 'clients';
 
-    protected $fillable = ['name', 'phone', 'email'];
+    protected $fillable = ['id','name', 'phone', 'cpf', 'email'];
 
     public function accounts(){
         return $this->hasMany(Accounts::class);
