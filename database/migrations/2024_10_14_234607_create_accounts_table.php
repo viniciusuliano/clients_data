@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('client_id')->constrained('clients')->onDelete('cascade');
+            $table->foreignId('client_id')->constrained('client')->onDelete('cascade');
             $table->decimal('value', 10, 2);
             $table->enum('payment_method', ['credit_card', 'cash', 'bank_transfer']);
             $table->timestamps();

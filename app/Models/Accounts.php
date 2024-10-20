@@ -13,8 +13,8 @@ class Accounts extends Model
     protected $table = 'Accounts';
     protected $fillable = [ 'id', 'client_id', 'value', 'payment_method' ];
 
-    public function clients(){
-        return $this->belongsTo(Clients::class);
+    public function client(){
+        return $this->belongsTo(Client::class);
     }
 
     public function parcelas(){
